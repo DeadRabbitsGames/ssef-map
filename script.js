@@ -6,6 +6,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     
     var bounds = [[0,0], [3456,3456]];
-    var image = L.imageOverlay('ssefmap.svg', bounds).addTo(map);
+    var image = L.svgOverlay(document.querySelector("#svgmap"), bounds).addTo(map);
     map.fitBounds(bounds);
 });
